@@ -4,18 +4,20 @@ const Footer = () => {
   return (
     <footer className="footer flex justify-evenly items-center p-4 bg-neutral text-neutral-content">
       <section className="footer flex justify-between items-center p-2 max-w-[1280px] text-neutral-content">
-        <aside className="items-center grid-flow-col">
-          <Link href="/">
-            <div className={`flex flex-col`}>
-              <span className="text-xs">explore</span>
-              <span className="font-[Kalam] font-semibold text-2xl leading-6">
-                India
-              </span>
-            </div>
-          </Link>
-        </aside>
+        <div className="flex flex-col gap-6">
+          <aside className="items-center grid-flow-col">
+            <Link href="/">
+              <div className="flex flex-col">
+                <span className="text-sm">explore</span>
+                <span className="font-[Kalam] font-semibold text-3xl leading-7">
+                  India
+                </span>
+              </div>
+            </Link>
+          </aside>
 
-        <p>Copyright © 2023 - All right reserved</p>
+          <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+        </div>
 
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <a>
