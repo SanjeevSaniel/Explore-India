@@ -2,7 +2,7 @@
   "name": "explore-india",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://SanjeevSaniel.github.io/explore-India",
+  "homepage": "https://sanjeevsaniel.github.io/explore-India",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
