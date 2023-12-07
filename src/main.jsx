@@ -8,9 +8,16 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import HomePage from "./components/Home/HomePage.jsx";
+import Content from "./components/Content/Content.jsx";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<App />}></Route>)
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route index element={<HomePage />} />
+      <Route path="/explore" element={<Content />} />
+    </Route>
+  )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
