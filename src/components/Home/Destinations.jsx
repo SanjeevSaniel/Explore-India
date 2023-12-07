@@ -1,8 +1,7 @@
-
 import states from "../../api/states.json";
 import { NavLink } from "react-router-dom";
 
-const Territories = () => {
+const Destinations = () => {
   states.sort((a, b) => {
     let fa = a.name.toLowerCase(),
       fb = b.name.toLowerCase();
@@ -19,7 +18,7 @@ const Territories = () => {
   return (
     <div className="flex flex-col items-center p-4 my-4">
       <p className="text-center text-[4rem] font-[Kalam] mx-4 mt-4 drop-shadow-md dark:text-white">
-        Territories
+        Destinations
       </p>
       <div className="flex flex-wrap justify-center items-center m-auto my-5 gap-4 max-w-[80%] dark:text-white drop-shadow-lg">
         {states.map((state, index) => {
@@ -37,4 +36,4 @@ const Territories = () => {
   );
 };
 
-export default Territories;
+export default Destinations;
