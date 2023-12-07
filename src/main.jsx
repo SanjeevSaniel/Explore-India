@@ -14,7 +14,7 @@ import Content from "./components/Content/Content.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<HomePage />} />
+      <Route path="/explore-India/" index element={<HomePage />} />
       <Route path="/explore" element={<Content />} />
     </Route>
   )

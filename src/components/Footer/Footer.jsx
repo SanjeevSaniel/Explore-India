@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const [dateTime, setDateTime] = useState(new Date());
@@ -18,14 +18,14 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <div>
             <aside className="items-center grid-flow-col">
-              <Link href="/">
+              <NavLink href="/explore-India/">
                 <div className="flex flex-col">
                   <span className="text-sm">explore</span>
                   <span className="font-[Kalam] font-semibold text-3xl leading-7">
                     India
                   </span>
                 </div>
-              </Link>
+              </NavLink>
             </aside>
           </div>
 
