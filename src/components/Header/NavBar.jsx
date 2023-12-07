@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="navbar bg-transparent text-white m-auto max-w-[1280px]">
+    <div className="navbar text-white m-auto max-w-[1280px]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,10 +32,10 @@ const NavBar = () => {
               <a>Parent</a>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <button>Submenu 1</button>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <button>Submenu 2</button>
                 </li>
               </ul>
             </li>
@@ -44,8 +44,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        {/* <a className=""> */}
-        {/* daisyUI */}
+
         <div className="flex flex-col text-white">
           <span className="text-md font-medium shadow-xl">explore</span>
           <span className="font-[Kalam] font-semibold text-4xl leading-8 shadow-xl">
@@ -54,34 +53,35 @@ const NavBar = () => {
             <span className="text-orange-400">ia</span>
           </span>
         </div>
-        {/* </a> */}
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal text-white text-[1rem] font-medium px-1">
           <li>
-            <a>Item 1</a>
+            <button>Destinations</button>
           </li>
           <li>
             <details>
               <summary>Parent</summary>
-              <ul className="p-2">
+              <ul className="p-1 bg-green-600 opacity-80 w-[8rem] rounded-md">
                 <li>
-                  <a>Submenu 1</a>
+                  <button className="">Submenu 1 </button>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <button>Submenu 2</button>
                 </li>
               </ul>
             </details>
           </li>
           <li>
-            <a>Item 3</a>
+            <button>Experiences</button>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <NavLink to="/" className="btn">
-          Button
+        <NavLink to="/">
+          <span className="bg-orange-500 bg-opacity-40 px-3 pt-1 pb-2 rounded-md drop-shadow-lg hover:bg-green-700 hover:bg-opacity-70">
+            Login
+          </span>
         </NavLink>
       </div>
     </div>
