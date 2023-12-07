@@ -1,22 +1,38 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-regular-svg-icons";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [dateTime, setDateTime] = useState(new Date());
+
+  useEffect(() => {
+    setInterval(() => {
+      setDateTime(new Date());
+    }, 1000);
+  }, []);
+
   return (
     <footer className="footer flex justify-evenly items-center p-4 bg-neutral text-neutral-content">
       <section className="footer flex justify-between items-center p-2 max-w-[1280px] text-neutral-content">
         <div className="flex flex-col gap-6">
-          <aside className="items-center grid-flow-col">
-            <Link href="/">
-              <div className="flex flex-col">
-                <span className="text-sm">explore</span>
-                <span className="font-[Kalam] font-semibold text-3xl leading-7">
-                  India
-                </span>
-              </div>
-            </Link>
-          </aside>
+          <div>
+            <aside className="items-center grid-flow-col">
+              <Link href="/">
+                <div className="flex flex-col">
+                  <span className="text-sm">explore</span>
+                  <span className="font-[Kalam] font-semibold text-3xl leading-7">
+                    India
+                  </span>
+                </div>
+              </Link>
+            </aside>
+          </div>
 
-          <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+          <div>
+            <FontAwesomeIcon icon={faCalendar} /> {dateTime.toString()}
+            <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+          </div>
         </div>
 
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
