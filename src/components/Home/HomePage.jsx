@@ -3,7 +3,7 @@ import NavBar from "../Header/NavBar";
 import { useState } from "react";
 
 import TopContent from "./TopContent";
-import Territories from "./Territories";
+import Destinations from "./Destinations";
 import HomePagePlaybacks from "./HomePagePlaybacks";
 
 const HomePage = () => {
@@ -46,7 +46,7 @@ const HomePage = () => {
       </div>
 
       <HomePagePlaybacks />
-      <Territories />
+      <Destinations />
       <TopContent />
     </div>
   );
