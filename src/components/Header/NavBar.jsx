@@ -1,6 +1,8 @@
+import { NavLink } from "react-router-dom";
+
 const NavBar = () => {
   return (
-    <div className="navbar bg-base-100 m-auto max-w-[1280px]">
+    <div className="navbar bg-transparent text-white m-auto max-w-[1280px]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,10 +46,12 @@ const NavBar = () => {
         </div>
         {/* <a className=""> */}
         {/* daisyUI */}
-        <div className="flex flex-col">
-          <span className="text-sm">explore</span>
-          <span className="font-[Kalam] font-semibold text-3xl leading-6">
-            India
+        <div className="flex flex-col text-white">
+          <span className="text-md font-medium shadow-xl">explore</span>
+          <span className="font-[Kalam] font-semibold text-4xl leading-8 shadow-xl">
+            <span className="text-green-400">In</span>
+            <span>d</span>
+            <span className="text-orange-400">ia</span>
           </span>
         </div>
         {/* </a> */}
@@ -76,7 +80,9 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <NavLink to="/" className="btn">
+          Button
+        </NavLink>
       </div>
     </div>
   );
