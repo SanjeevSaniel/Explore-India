@@ -17,7 +17,7 @@ const HomePage = () => {
           // controls
           // loop
           muted
-          className="absolute top-0 bottom-0 w-full h-full mx-auto rounded-lg shadow-xl"
+          className="absolute top-0 bottom-0 w-full h-full mx-auto rounded-lg"
         >
           <source
             src="https://www.incredibleindia.org/content/dam/incredible-india-v2/video/original/Incredible_india_Edit_v10_1980x786_resolution.mp4"
